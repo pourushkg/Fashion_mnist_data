@@ -1,0 +1,17 @@
+params:
+  loss_function: sparse_categorical_crossentropy
+  optimizer: SGD
+  metrics: accuracy
+  num_classes: 10 
+  input_shape: [28,28]
+  epochs: 10
+  batch_size: 32
+  validation_data: 5000
+  patience: 5
+
+artifacts:
+  model_name: fashion_model.keras
+  model_dir: fashion_model
+  artifacts_dir: artifacts
+  
+
