@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import pandas as pd 
 
 
-def create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASS):
+def create_model(LOSS_FUNCTION,OPTIMIZER,METRICS,NUM_CLASS,INPUT_SHAPE):
     layers=[
-        tf.keras.layers.Flatten(input_shape=[28,28],name="input_layer"),
+        tf.keras.layers.Flatten(input_shape=INPUT_SHAPE,name="input_layer"),
         tf.keras.layers.Dense(300,activation="relu",name="first_hidden_layer"),
         tf.keras.layers.Dense(100,activation="relu",name="second_hidden_layer"),
         tf.keras.layers.Dense(NUM_CLASS,activation="softmax",name="output_layer")
